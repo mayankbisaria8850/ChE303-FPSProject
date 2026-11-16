@@ -1,0 +1,29 @@
+<section id="base-results" class="alt">
+<div class="head">
+<p class="eyebrow">ASPEN SIMULATION RESULTS</p>
+<h2>The base case closes the mass balance exactly</h2>
+</div>
+<div class="row" style="gap:64px">
+<table class="tbl" style="width:980px">
+<tr class="hd"><th style="width:26%">Stream</th><th style="width:22%; text-align:right">Total (kg/h)</th><th style="width:22%; text-align:right">Cellulose (kg/h)</th><th style="width:30%">Role</th></tr>
+<tr><td>POMACE</td><td style="text-align:right">1,000.00</td><td style="text-align:right">200.00</td><td>Raw feed</td></tr>
+<tr class="z"><td>HOT-AIR</td><td style="text-align:right">1,500.00</td><td style="text-align:right">0.00</td><td>Drying air</td></tr>
+<tr><td>MILLED</td><td style="text-align:right">1,000.00</td><td style="text-align:right">200.00</td><td>Mill outlet</td></tr>
+<tr class="z"><td>OVERSIZE</td><td style="text-align:right">72.52</td><td style="text-align:right">32.52</td><td>Peel co-product</td></tr>
+<tr><td>SLURRY</td><td style="text-align:right">927.48</td><td style="text-align:right">167.48</td><td>Screen undersize</td></tr>
+<tr class="em"><td>JUICE</td><td style="text-align:right">448.96</td><td style="text-align:right">0.00</td><td>Product: clarified juice</td></tr>
+<tr><td>WET-CAKE</td><td style="text-align:right">478.52</td><td style="text-align:right">167.48</td><td>Centrifuge cake</td></tr>
+<tr class="em"><td>PRODUCT</td><td style="text-align:right">167.48</td><td style="text-align:right">167.48</td><td>Product: dry fibre</td></tr>
+<tr class="z"><td>EXHAUST</td><td style="text-align:right">1,811.04</td><td style="text-align:right">0.00</td><td>Air + vapour</td></tr>
+</table>
+<div class="col grow" style="gap:28px">
+<div class="kpi"><p class="val">83.7 %</p><p class="small">fibre recovery (167.5 of 200 kg/h cellulose)</p></div>
+<div class="kpi"><p class="val">56.1 %</p><p class="small">juice recovery (449.0 of 800 kg/h liquid)</p></div>
+<div class="kpi"><p class="val">0.615 kW</p><p class="small">mill power, 0.61 kWh per tonne of wet feed</p></div>
+<div class="kpi"><p class="val">2,500</p><p class="small">kg/h in = kg/h out (pomace + air)</p></div>
+</div>
+</div>
+<p class="foot">ZestLoop · Aspen simulation results</p>
+<div class="pnum"></div>
+<aside>This is the Aspen base case: 1000 kg/h feed and a 1.0 mm screen. Inputs (pomace plus hot air, 2500 kg/h) equal outputs (oversize, juice, product and exhaust). 83.7 percent of the cellulose ends up as dry fibre; the rest is coarse peel in the oversize. The decanter recovers 56 percent of the liquid as clear juice; the rest leaves in the 65 percent moisture cake and is evaporated in the dryer. The mill draws 0.615 kW. Limitation to mention: Aspen sends the dissolved glucose and citric acid out with the exhaust, which a real dryer would not do.</aside>
+</section>

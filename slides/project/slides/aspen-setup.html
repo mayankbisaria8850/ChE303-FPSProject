@@ -1,0 +1,26 @@
+<section id="aspen-setup">
+<div class="head">
+<p class="eyebrow">ASPEN FLOWSHEET</p>
+<h2>Why each block, and how it was set up</h2>
+</div>
+<div class="row">
+<div class="col" style="width:520px; gap:20px">
+<div class="mini"><p class="t">NRTL property method</p><p class="d">Water, sugar and citric acid form a strongly polar mixture; NRTL captures the liquid non-ideality.</p></div>
+<div class="mini"><p class="t">MIXCIPSD stream class</p><p class="d">Tracks the liquid and a 10-interval solid PSD (0–10 mm) in every stream.</p></div>
+<div class="mini"><p class="t">SCALE-FD calculator</p><p class="d">Sets solids = 0.25 × liquid at every sweep point, keeping the feed at 80/20.</p></div>
+</div>
+<div class="col grow">
+<table class="tbl" style="font-size:24px">
+<tr class="hd"><th style="width:15%">Block</th><th style="width:37%">Key specification</th><th style="width:48%">Why it is there</th></tr>
+<tr><td>MILL<br>Crusher</td><td>Bond's law, Wi = 12; outlet PSD set, P80 0.75 mm</td><td>Opens the juice-holding peel cells; 5.7 mm feed can't be pumped</td></tr>
+<tr class="z"><td>SCREEN<br>Screen</td><td>1.0 mm cut, Whiten α = 3.5, 5 % liquid to oversize</td><td>Scalps coarse peel that would wear the decanter scroll</td></tr>
+<tr><td>CENTRIF<br>Cfuge</td><td>0.05 mm cut, cake 65 wt% moisture</td><td>Viscous pectin slurry needs centrifugal force; cheaper than evaporating</td></tr>
+<tr class="z"><td>DRYER<br>Dryer</td><td>Shortcut, adiabatic, 1,500 kg/h air at 90 °C</td><td>Turns the perishable cake into a shelf-stable powder</td></tr>
+</table>
+<p class="small">Simplifications: cellulose (1.52 g/cm³) stands in for all insoluble fibre; glucose and citric acid stand in for the sugars and acids; the mill outlet PSD is specified, not predicted.</p>
+</div>
+</div>
+<p class="foot">ZestLoop · Aspen flowsheet</p>
+<div class="pnum"></div>
+<aside>Property set-up: NRTL because the liquid is a polar water, sugar and acid mixture; MIXCIPSD so Aspen tracks both the liquid and the particle size distribution of the cellulose; a Calculator block keeps the 80 to 20 liquid to solid ratio when the feed is varied. Block order: mill first to release juice and make the feed pumpable, screen before the centrifuge to protect it, centrifuge before the dryer because mechanical dewatering is far cheaper than evaporation. Note for questions: Aspen applies the Bond work index per short ton (Bond's original definition), and the screen used Aspen's default Whiten sharpness of 3.5.</aside>
+</section>

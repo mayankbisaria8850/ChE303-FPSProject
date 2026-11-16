@@ -1,0 +1,11 @@
+[theme.light]
+primaryColor = "#eb6834"
+
+[theme.dark]
+primaryColor = "#eb6834"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

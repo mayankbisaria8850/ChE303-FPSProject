@@ -1,0 +1,32 @@
+<section id="py-mill">
+<div class="head">
+<p class="eyebrow">PYTHON CALCULATIONS · UNIT A</p>
+<h2>Hammer mill energy from Bond’s law</h2>
+</div>
+<div class="row">
+<div class="col" style="width:860px">
+<p class="eqn">W = 10 Wᵢ (1/√P₈₀ − 1/√F₈₀)      P = W · ṁ(solids)</p>
+<table class="tbl" style="font-size:24px">
+<tr class="hd"><th style="width:26%">Step</th><th style="width:46%">Working</th><th style="width:28%; text-align:right">Result</th></tr>
+<tr><td>F₈₀, raw PSD</td><td>4 + (0.80 − 0.55)/0.30 × 2 mm</td><td style="text-align:right">5,667 µm</td></tr>
+<tr class="z"><td>P₈₀, milled PSD</td><td>0.5 + (0.80 − 0.70)/0.20 × 0.5 mm</td><td style="text-align:right">750 µm</td></tr>
+<tr><td>Bond energy W</td><td>10 × 12 × (1/√750 − 1/√5,667)</td><td style="text-align:right">2.788 kWh/ton</td></tr>
+<tr class="z"><td>Solids flow ṁ</td><td>200 kg/h ÷ 907.2 kg per short ton</td><td style="text-align:right">0.2205 ton/h</td></tr>
+<tr class="em"><td>Mill power P</td><td>2.788 × 0.2205</td><td style="text-align:right">0.6146 kW</td></tr>
+</table>
+<p class="small">Assumptions: Bond acts on the dry fibre only; Wᵢ is constant; η = 1; the outlet PSD is fixed. Wᵢ is per short ton (907 kg), as Aspen uses; a metric tonne would give 0.558 kW.</p>
+</div>
+<div class="col grow">
+<div class="card-dark">
+<p class="k">CHECK AGAINST ASPEN</p>
+<p class="v">Python = Aspen to 4 × 10⁻⁹ at all 7 feed rates.</p>
+</div>
+<div class="fig">
+<img src="/_blob/2c3835c4930cdaec19c71b72c68532ab" alt="Mill power against feed rate: the seven Aspen points lie on the Python Bond line for the short-ton basis; the metric-tonne line is 9.3 % lower" style="width:600px; height:375px; object-fit:contain">
+</div>
+</div>
+</div>
+<p class="foot">ZestLoop · Python equipment calculations</p>
+<div class="pnum"></div>
+<aside>Governing equation: Bond's third law. Variables: W specific energy in kWh per ton of solids, Wi the work index (12 kWh per ton for fibrous peel), F80 and P80 the 80 percent passing sizes of feed and product in micrometres, and the solids mass flow. The hand calculation interpolates F80 and P80 from the cumulative PSD tables, then gives 0.6146 kW, matching Aspen to nine significant figures. The independent check is that the Python function reproduces all seven Aspen MILL_POWER values. Finding: the match only works with Bond's original short-ton basis, so Aspen treats Wi as kWh per short ton. Code: calc/mill.py, tests in calc/tests/test_mill.py.</aside>
+</section>

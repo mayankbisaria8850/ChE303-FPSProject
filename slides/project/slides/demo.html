@@ -1,0 +1,24 @@
+<section id="demo">
+<div class="head">
+<p class="eyebrow">LIVE WEBSITE DEMONSTRATION</p>
+<h2>Change an input, watch the plant respond</h2>
+</div>
+<div class="row">
+<div class="fig" style="width:820px">
+<img src="/_blob/06fea13cac4b1bb5d7c2e703e596964e" alt="ZestLoop website Calculator tab at 1,000 kg/h and 0.50 mm, showing exact Aspen case 13 with 122.0 kg/h fibre, 533.4 kg/h juice, 78.0 kg/h oversize and 0.615 kW" style="width:784px; height:459px; object-fit:contain">
+</div>
+<div class="col grow">
+<ol class="pts">
+<li>Set 1,000 kg/h and 0.5 mm: exact Aspen case 13, 122 kg/h of fibre.</li>
+<li>Slide the cut to 1.5 mm: fibre 184 kg/h, juice 418 kg/h.</li>
+<li>Raise the feed to 2,000 kg/h: every flow and the mill power double.</li>
+<li>Engineering tab: switch Wᵢ to metric tonnes; move α to 10.</li>
+<li>Dataset tab: the valid range and the blind interpolation test.</li>
+</ol>
+<p class="small">Run it locally: streamlit run app/app.py</p>
+</div>
+</div>
+<p class="foot">ZestLoop · Live website demonstration</p>
+<div class="pnum"></div>
+<aside>Start the site before the talk (streamlit run app/app.py) and keep the browser open on the Calculator tab. Step 1 shows an exact lookup of a simulated case. Step 2 shows the trade-off: fibre rises, juice falls, because every extra kilogram of fibre leaves the decanter carrying about 1.86 kg of liquid. Step 3 shows linear scale-up: recoveries stay the same, flows double. Step 4 shows the Python model: Bond's law with a metric-tonne basis drops 9.3 percent below Aspen; a sharper screen passes more fine fibre. Step 5 shows that the site states its valid range and how accurate the interpolation is. Also point to the Process tab, where the flowsheet labels update live.</aside>
+</section>

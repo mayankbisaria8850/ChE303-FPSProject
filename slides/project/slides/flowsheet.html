@@ -1,0 +1,30 @@
+<section id="flowsheet" class="alt">
+<div class="head">
+<p class="eyebrow">ASPEN FLOWSHEET</p>
+<h2>Four connected units turn pomace into three products</h2>
+</div>
+<div class="flow">
+<div class="arr" style="grid-column:4; grid-row:1; align-self:end"><p class="lab"><b>MILLED</b><br>1,000</p></div>
+<div class="arr" style="grid-column:6; grid-row:1; align-self:end"><p class="lab"><b>SLURRY</b><br>927.5</p></div>
+<div class="arr" style="grid-column:8; grid-row:1; align-self:end"><p class="lab"><b>WET-CAKE</b><br>478.5</p></div>
+<div class="arr" style="grid-column:9; grid-row:1; align-self:end"><p class="lab"><b>HOT-AIR</b><br>1,500 · 90 °C</p><x-shape kind="arrow-down" class="ad"></x-shape></div>
+<p class="lab" style="grid-column:1; grid-row:2; text-align:left"><b>POMACE</b><br>1,000<br>wet feed</p>
+<div class="arr" style="grid-column:2; grid-row:2"><x-shape kind="arrow-right" class="ar"></x-shape></div>
+<div class="unit" style="grid-column:3; grid-row:2"><p class="nm">MILL</p><p class="eq">hammer mill</p></div>
+<div class="arr" style="grid-column:4; grid-row:2"><x-shape kind="arrow-right" class="ar"></x-shape></div>
+<div class="unit" style="grid-column:5; grid-row:2"><p class="nm">SCREEN</p><p class="eq">vibrating screen</p></div>
+<div class="arr" style="grid-column:6; grid-row:2"><x-shape kind="arrow-right" class="ar"></x-shape></div>
+<div class="unit" style="grid-column:7; grid-row:2"><p class="nm">CENTRIF</p><p class="eq">decanter centrifuge</p></div>
+<div class="arr" style="grid-column:8; grid-row:2"><x-shape kind="arrow-right" class="ar"></x-shape></div>
+<div class="unit" style="grid-column:9; grid-row:2"><p class="nm">DRYER</p><p class="eq">hot-air dryer</p></div>
+<div class="arr" style="grid-column:10; grid-row:2"><x-shape kind="arrow-right" class="ar ar-fibre"></x-shape></div>
+<p class="lab" style="grid-column:11; grid-row:2; text-align:left"><b>PRODUCT</b><br>167.5<br>dry fibre</p>
+<div class="arr" style="grid-column:5; grid-row:3; align-self:start"><x-shape kind="arrow-down" class="ad ar-over"></x-shape><p class="lab"><b>OVERSIZE</b><br>72.5<br>peel</p></div>
+<div class="arr" style="grid-column:7; grid-row:3; align-self:start"><x-shape kind="arrow-down" class="ad ar-juice"></x-shape><p class="lab"><b>JUICE</b><br>449.0<br>clarified</p></div>
+<div class="arr" style="grid-column:9; grid-row:3; align-self:start"><x-shape kind="arrow-down" class="ad"></x-shape><p class="lab"><b>EXHAUST</b><br>1,811<br>air + vapour</p></div>
+</div>
+<p class="small">Base case, all flows in kg/h · steady state, open loop · Aspen Plus V14 with NRTL and the MIXCIPSD stream class.</p>
+<p class="foot">ZestLoop · Aspen flowsheet</p>
+<div class="pnum"></div>
+<aside>Walk the flowsheet left to right. Feed: 1000 kg/h of pomace at 25 °C, 800 kg/h liquid (water, glucose, citric acid) and 200 kg/h cellulose. The mill shreds peel from F80 5.7 mm to P80 0.75 mm. The screen at 1.0 mm sends 72.5 kg/h of coarse peel to oversize and 927.5 kg/h of slurry on. The decanter recovers 449 kg/h of clear juice and a 478.5 kg/h cake at 65 percent moisture. The dryer uses 1500 kg/h of air at 90 °C to give 167.5 kg/h of dry fibre. Product, waste or co-product, and intermediate streams are all shown.</aside>
+</section>

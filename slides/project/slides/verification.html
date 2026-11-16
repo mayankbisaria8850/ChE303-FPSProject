@@ -1,0 +1,26 @@
+<section id="verification">
+<div class="head">
+<p class="eyebrow">PYTHON CALCULATIONS · VERIFICATION</p>
+<h2>Hand calculations and Aspen agree</h2>
+</div>
+<div class="row">
+<div class="col" style="width:860px">
+<table class="tbl" style="font-size:24px">
+<tr class="hd"><th style="width:58%">Check</th><th style="width:17%; text-align:right">Cases</th><th style="width:25%; text-align:right">Max error</th></tr>
+<tr><td>Hand calculation vs Aspen: mill power</td><td style="text-align:right">1</td><td style="text-align:right">6 × 10⁻⁸ %</td></tr>
+<tr class="z"><td>Hand calculation vs Aspen: oversize</td><td style="text-align:right">1</td><td style="text-align:right">&lt; 0.01 kg/h</td></tr>
+<tr><td>Python vs Aspen: MILL_POWER</td><td style="text-align:right">7</td><td style="text-align:right">4.3 × 10⁻⁹</td></tr>
+<tr class="z"><td>Python vs Aspen: OVERSIZE, FIBER</td><td style="text-align:right">42</td><td style="text-align:right">3.9 × 10⁻⁹</td></tr>
+<tr><td>Python vs Aspen: JUICE</td><td style="text-align:right">42</td><td style="text-align:right">4.4 × 10⁻⁹</td></tr>
+<tr class="z"><td>Python vs base-case stream table</td><td style="text-align:right">7 streams</td><td style="text-align:right">0.01 kg/h</td></tr>
+</table>
+<p class="small">Errors are relative unless a unit is given. Physical checks in the test suite: E(d₅₀) = 0.5, E rises with size, the mass balance closes, power scales linearly with feed. All 43 tests pass.</p>
+</div>
+<div class="fig grow">
+<img src="/_blob/0381d5218622dc64e9427d6f32ee4c3c" alt="Four parity plots of Python against Aspen for mill power, oversize, juice and fibre; all 42 points lie on the diagonal" style="width:620px; height:551px; object-fit:contain">
+</div>
+</div>
+<p class="foot">ZestLoop · Python equipment calculations</p>
+<div class="pnum"></div>
+<aside>Independent verification has two layers. First, hand calculations of both units at the base case, worked step by step, give the same mill power and oversize as Aspen. Second, the Python model of the whole flowsheet reproduces every one of the 42 Aspen cases for all four outputs, with relative errors around 1e-9, which is just the CSV's printed precision. The parity plots show every point on the 45-degree line. Run it yourself with: python -m calc.verify. Tests: python -m pytest.</aside>
+</section>

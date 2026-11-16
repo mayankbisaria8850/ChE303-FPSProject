@@ -1,0 +1,29 @@
+<section id="py-screen" class="alt">
+<div class="head">
+<p class="eyebrow">PYTHON CALCULATIONS · UNIT B</p>
+<h2>Screen performance from the Whiten curve</h2>
+</div>
+<div class="row">
+<div class="col" style="width:900px">
+<p class="eqn">E = (e^(αx) − 1) / (e^(αx) + e^α − 2),   x = d / d₅₀</p>
+<table class="tbl" style="font-size:24px">
+<tr class="hd"><th style="width:24%">Interval (mm)</th><th style="width:16%; text-align:right">d̄ (mm)</th><th style="width:16%; text-align:right">w</th><th style="width:22%; text-align:right">E</th><th style="width:22%; text-align:right">w · E</th></tr>
+<tr><td>0.05–0.10</td><td style="text-align:right">0.075</td><td style="text-align:right">0.10</td><td style="text-align:right">0.0093</td><td style="text-align:right">0.0009</td></tr>
+<tr class="z"><td>0.10–0.25</td><td style="text-align:right">0.175</td><td style="text-align:right">0.25</td><td style="text-align:right">0.0256</td><td style="text-align:right">0.0064</td></tr>
+<tr><td>0.25–0.50</td><td style="text-align:right">0.375</td><td style="text-align:right">0.35</td><td style="text-align:right">0.0780</td><td style="text-align:right">0.0273</td></tr>
+<tr class="z"><td>0.50–1.00</td><td style="text-align:right">0.750</td><td style="text-align:right">0.20</td><td style="text-align:right">0.2851</td><td style="text-align:right">0.0570</td></tr>
+<tr><td>1.00–1.50</td><td style="text-align:right">1.250</td><td style="text-align:right">0.10</td><td style="text-align:right">0.7095</td><td style="text-align:right">0.0710</td></tr>
+</table>
+<div class="card-dark">
+<p class="k">RESULT AT d₅₀ = 1.0 mm, α = 3.5</p>
+<p class="v">Σ w·E = 0.1626 → 32.52 kg/h oversize and 167.48 kg/h fibre. Aspen gives the same.</p>
+</div>
+</div>
+<div class="fig grow">
+<img src="/_blob/0969833c7437b74a49ab085d9c812b48" alt="Top: milled solids PSD as bars. Bottom: Whiten partition curves for cut sizes 0.5, 1.0 and 1.5 mm; each crosses 0.5 at its cut size" style="width:580px; height:544px; object-fit:contain">
+</div>
+</div>
+<p class="foot">ZestLoop · Python equipment calculations</p>
+<div class="pnum"></div>
+<aside>The Whiten selection function gives the fraction of particles of size d that report to the oversize. x is the particle size divided by the cut size, alpha is the sharpness; at d equal to the cut size, E is exactly one half. We weight E by the mass fraction in each milled size class, using the class midpoint as its size. At a 1.0 mm cut, 16.26 percent of the solids go to oversize, so 32.52 kg/h of the 200 kg/h of cellulose, exactly the Aspen value. Alpha = 3.5 is Aspen's default; we identified it because it reproduces all 42 OVERSIZE values. Assumptions: partition by size only, no breakage on the deck, 5 percent of the liquid carried into the oversize. Code: calc/screen.py.</aside>
+</section>

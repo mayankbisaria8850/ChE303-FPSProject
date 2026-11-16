@@ -1,0 +1,112 @@
+/* ZestLoop deck - shared look.
+   Palette: ink #1E2B24 (deep leaf), cream #FBF7F0, sand #F1E8D8, orange #E8661E,
+   orange text #B04A0F (on light) / #F08A4B (on dark), body #4A5248, muted #5F665C.
+   Type scale: 120 / 60 / 34 / 28 / 24. */
+
+section {
+  counter-increment: page;
+  box-sizing: border-box;
+  padding: 128px 128px 160px;
+  background: #FBF7F0;
+  color: #1E2B24;
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+section.alt { background: #F1E8D8; }
+section.dark { background: #1E2B24; color: #FBF7F0; }
+section.accent { background: #EE7A38; color: #1E2B24; }
+section.accent h1 { color: #1E2B24; }
+section.accent .val { color: #1E2B24; }
+section.accent .txt { color: #1E2B24; }
+section.accent .small { color: #1E2B24; }
+.stat { display: flex; flex-direction: column; gap: 8px; border-top: 4px solid #1E2B24; padding-top: 24px; }
+
+h1 { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 120px; font-weight: 700; line-height: 1.05; color: #FBF7F0; }
+h2 { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 60px; font-weight: 700; line-height: 1.1; color: #1E2B24; }
+h3 { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 34px; font-weight: 600; line-height: 1.2; color: #1E2B24; }
+section.dark h2 { color: #FBF7F0; }
+section.dark h3 { color: #FBF7F0; }
+
+.head { display: flex; flex-direction: column; gap: 12px; }
+.eyebrow { font-size: 24px; font-weight: 600; letter-spacing: 3px; color: #B04A0F; }
+section.dark .eyebrow { color: #F08A4B; }
+section.accent .eyebrow { color: #1E2B24; }
+.lead { font-size: 34px; line-height: 1.35; color: #4A5248; }
+section.dark .lead { color: #C9D3C4; }
+.txt { font-size: 28px; line-height: 1.4; color: #4A5248; }
+section.dark .txt { color: #C9D3C4; }
+.small { font-size: 24px; line-height: 1.35; color: #5F665C; }
+section.dark .small { color: #A9B5A6; }
+.num { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 120px; font-weight: 700; line-height: 1; color: #B04A0F; }
+.numlabel { font-size: 28px; line-height: 1.35; color: #4A5248; }
+.val { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 60px; font-weight: 700; line-height: 1.1; color: #B04A0F; }
+section.dark .val { color: #F08A4B; }
+
+.pts { font-size: 28px; line-height: 1.4; color: #4A5248; padding-left: 36px; }
+.pts li { margin-bottom: 14px; }
+section.dark .pts { color: #C9D3C4; }
+
+/* layout helpers */
+.row { display: flex; flex-direction: row; gap: 48px; }
+.col { display: flex; flex-direction: column; gap: 24px; }
+.grow { flex: 1; }
+.cards3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+.cards2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.card { background: #FFFDF8; border: 2px solid #E3D7C1; border-radius: 20px; padding: 40px; display: flex; flex-direction: column; gap: 16px; }
+section.alt .card { background: #FBF7F0; }
+.card-dark { background: #1E2B24; border-radius: 20px; padding: 36px 40px; display: flex; flex-direction: column; gap: 10px; }
+.card-dark .k { font-size: 24px; font-weight: 600; letter-spacing: 2px; color: #F08A4B; }
+.card-dark .v { font-size: 28px; line-height: 1.35; color: #FBF7F0; }
+.tag { font-size: 24px; font-weight: 600; color: #B04A0F; }
+.fig { background: #FCFCFB; border: 2px solid #E3D7C1; border-radius: 20px; padding: 16px; display: flex; align-items: center; justify-content: center; }
+.eqn { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 34px; font-weight: 600; color: #1E2B24; background: #F1E8D8; border-radius: 16px; padding: 24px 32px; }
+
+.mini { background: #F1E8D8; border-radius: 16px; padding: 24px 28px; display: flex; flex-direction: column; gap: 8px; }
+section.alt .mini { background: #FBF7F0; }
+.mini .t { font-size: 28px; font-weight: 600; color: #1E2B24; }
+.mini .d { font-size: 24px; line-height: 1.35; color: #4A5248; }
+.kpi { display: flex; flex-direction: column; gap: 4px; }
+
+/* tables */
+.tbl { width: 100%; font-size: 26px; color: #1E2B24; font-family: 'Inter', Arial, sans-serif; }
+.tbl th { color: #FBF7F0; text-align: left; font-weight: 600; }
+.tbl tr.hd { background: #1E2B24; }
+.tbl tr.z { background: #F1E8D8; }
+.tbl tr.em { background: #FDE3D2; }
+section.alt .tbl tr.z { background: #FBF7F0; }
+
+/* flowsheet diagram */
+.flow { display: grid; grid-template-columns: 145px 125px 175px 125px 175px 125px 175px 125px 175px 125px 170px; column-gap: 2px; row-gap: 18px; align-items: center; }
+.unit { background: #FDE3D2; border: 3px solid #E8661E; border-radius: 18px; padding: 20px 10px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.unit .nm { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #1E2B24; text-align: center; }
+.unit .eq { font-size: 24px; line-height: 1.2; color: #4A5248; text-align: center; }
+.arr { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.lab { font-size: 24px; line-height: 1.2; color: #1E2B24; text-align: center; }
+.ar { width: 84px; height: 36px; background: #5F665C; }
+.ad { width: 30px; height: 56px; background: #5F665C; }
+.ar-fibre { background: #2A78D6; }
+.ar-juice { background: #E8661E; }
+.ar-over { background: #1BAF7A; }
+
+/* footer */
+.foot { position: absolute; left: 128px; bottom: 64px; width: 1200px; font-size: 24px; color: #5F665C; }
+.pnum { position: absolute; left: 1672px; bottom: 64px; width: 120px; font-size: 24px; color: #5F665C; text-align: right; }
+.pnum::after { content: counter(page); }
+section.dark .foot { color: #A9B5A6; }
+section.dark .pnum { color: #A9B5A6; }
+section.accent .foot { color: #1E2B24; }
+section.accent .pnum { color: #1E2B24; }
+
+/* cover */
+.orb { position: absolute; left: 1232px; top: 260px; width: 560px; height: 560px; background: #E8661E; }
+.orb2 { position: absolute; left: 1392px; top: 420px; width: 240px; height: 240px; background: #F08A4B; }
+.cover-text { display: flex; flex-direction: column; gap: 28px; width: 1040px; }
+
+/* motion: content rises in on arrival */
+.rise { animation: rise 600ms ease-out both; }
+.d1 { animation-delay: 120ms; }
+.d2 { animation-delay: 240ms; }
+.d3 { animation-delay: 360ms; }
+@keyframes rise { from { opacity: 0; transform: translate(0px, 24px); } to { opacity: 1; transform: translate(0px, 0px); } }

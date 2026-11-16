@@ -1,0 +1,34 @@
+<section id="dataset" class="alt">
+<div class="head">
+<p class="eyebrow">CSV DATASET AND WEBSITE</p>
+<h2>From Aspen export to an offline website</h2>
+</div>
+<div class="cards3">
+<div class="card rise">
+<p class="tag">1 · EXPORT</p>
+<h3>Aspen Sensitivity S-1</h3>
+<p class="txt">Full 7 × 6 grid, 42 converged cases. Inputs: feed and cut size. Outputs: mill power, oversize, juice, fibre.</p>
+</div>
+<div class="card rise d1">
+<p class="tag">2 · ORGANISE</p>
+<h3>A tidy, checked table</h3>
+<p class="txt">The loader cleans the multi-line headers, converts m to mm, and checks status OK and a complete grid.</p>
+</div>
+<div class="card rise d2">
+<p class="tag">3 · RETRIEVE</p>
+<h3>Look up or interpolate</h3>
+<p class="txt">Exact case on the grid; otherwise PCHIP in cut size, linear in feed. Inputs stop at the valid range.</p>
+</div>
+</div>
+<div class="col" style="gap:16px">
+<p class="small">Blind test at 1,000 kg/h and 1.0 mm, a point not in the CSV (dry fibre, kg/h):</p>
+<div class="cards3">
+<div class="kpi"><p class="val">167.48</p><p class="small">Aspen report</p></div>
+<div class="kpi"><p class="val">167.49</p><p class="small">PCHIP, +0.003 %</p></div>
+<div class="kpi"><p class="val">166.96</p><p class="small">linear, −0.31 %</p></div>
+</div>
+</div>
+<p class="foot">ZestLoop · CSV dataset and website</p>
+<div class="pnum"></div>
+<aside>How the Aspen results were exported: Sensitivity S-1 varied feed (through the liquid flow, with the SCALE-FD calculator scaling solids) and screen cut size, tabulating four outputs; 42 converged cases. How it is organised: the website reads the raw CSV unchanged, cleans the headers, converts units and checks the grid. How results are retrieved: exact lookup when the inputs hit a simulated case, otherwise 2-D interpolation. Along feed every output is exactly linear; along cut size the curves bend, so we use PCHIP, a monotone cubic. We tested it blind on the base case, which is in the Aspen report but not in the CSV: PCHIP is within 0.003 percent, linear is 0.31 percent off. The website is Streamlit in Python and needs no Aspen connection.</aside>
+</section>
