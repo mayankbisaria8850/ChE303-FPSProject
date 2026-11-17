@@ -2,7 +2,7 @@
 
 ChE 303 Fluid Particle Systems startup project.
 
-Juice plants throw away 45–50 % of each orange as wet pomace. ZestLoop turns it into dry citrus-fibre powder, clarified juice and a coarse peel co-product, using a continuous line:
+Around 50-60 % of each orange is put out as wet pomace, by Juice . ZestLoop turns it into dry citrus-fibre powder, clarified juice and a coarse peel co-product, using a continuous line:
 
 **POMACE → hammer MILL → SCREEN → decanter CENTRIFUGE → DRYER**
 
